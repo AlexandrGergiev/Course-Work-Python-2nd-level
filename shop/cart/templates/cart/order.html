@@ -1,0 +1,23 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1 style="color:#304368">Оформиление Заказа</h1>
+<p style="color:#043F93"> ФИО Получателя </p>
+<textarea></textarea>
+<p style="color:#043F93"> Название населенного пункта </p>
+<textarea></textarea>
+<p style="color:#043F93"> Адрес доставки/Номер отеления новой почты </p>
+<textarea></textarea>
+<p style="color:#043F93"> Телефонный номер</p>
+<textarea></textarea>
+<p style="color:#043F93"> Дополнительные пожелания по товару и по доставке </p>
+<textarea></textarea>
+<p class="text-right">
+    <a href="{% url 'myshop:product_list' %}" class="button">Подтвердить заказ</a>
+</p>
+
+{% endblock %}

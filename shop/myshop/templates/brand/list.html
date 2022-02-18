@@ -1,0 +1,23 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1 style="color:#304368">Бренды</h1>
+{% if brand_list %}
+
+<ul class="alert alert-warning mt-2">
+    {% for brand in brand_list %}
+    <li style="color:#50465b"><h3> {{ brand.title }} </h3></li>
+    <p style="color:#2b81c8"> {{ brand.summary }} </p>
+    <p style="color:#2bcac8">Производитель: {{ brand.producer }} </p>
+    {% endfor %}
+</ul>
+
+{% else %}
+
+<p>No brands</p>
+
+{% endif %} {% endblock %}
